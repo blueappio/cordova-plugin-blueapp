@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="io.blueapp" version="1.0.0" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+  <name>io.blueapp</name>
+  <description>Cordova BlueApp Plugin</description>
+
+  <asset src="www/ioblueapp.js" target="js/ioblueapp.js"/>
+
+  <js-module src="www/ioblueapp.js" name="ioblueapp">
+    <clobbers target="cordova.plugins.io.blueapp" />
+  </js-module>
+
+  <platform name="android">
+
+    <config-file target="res/xml/config.xml" parent="/*">
+      <feature name="IOBlueApp">
+        <param name="android-package" value="io.blueapp.IOBlueApp"/>
+      </feature>
+    </config-file>
+
+    <source-file src="src/android/IOBlueApp.java" target-dir="src/io/blueapp/"/>
+  </platform>
+
+  <platform name="ios">
+    
+    <config-file target="config.xml" parent="/widget">
+      <feature name="IOBlueApp">
+        <param name="ios-package" value="IOBlueApp" />
+      </feature>
+    </config-file>
+
+    <header-file src="src/ios/IOBlueApp.h" target-dir="IOBlueApp"/>
+    <source-file src="src/ios/IOBlueApp.m" target-dir="IOBlueApp"/>
+  </platform>
+
+</plugin>

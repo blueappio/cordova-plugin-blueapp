@@ -1,0 +1,26 @@
+{
+  "name": "io.blueapp",
+  "version": "1.0.0",
+  "description": "Cordova BlueApp Plugin",
+  "cordova": {
+    "id": "io.blueapp",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  },
+  "keywords": [
+    "ecosystem:cordova"
+    "cordova",
+    "vensi",
+    "cordova-ios",
+    "cordova-android",
+    "gattip",
+    "blueapp",
+    "blueapp.io"
+    "bluetooth",
+    "ble"
+  ],
+  "author": "kushal@vensi.com",
+  "license": "ISC"
+}
