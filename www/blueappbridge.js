@@ -1,6 +1,5 @@
-module.exports = {
-    request: function (action, message, successCallback, errorCallback) {
-        cordova.exec(successCallback, errorCallback, "BlueAppBridge", action, [message]);
-    }
-};
+var exec = require('cordova/exec');
 
+exports.request = function(action, message, success, error) {
+    exec(successCallback, errorCallback, "io.blueapp", action, [message]);
+};
