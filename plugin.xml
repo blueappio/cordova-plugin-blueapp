@@ -23,13 +23,13 @@
   <platform name="ios">
     
     <config-file target="config.xml" parent="/widget">
-      <feature name="IOBlueApp">
+      <feature name="cordova-plugin-blueapp">
         <param name="ios-package" value="IOBlueApp" />
       </feature>
     </config-file>
 
-    <header-file src="src/ios/IOBlueApp.h" target-dir="IOBlueApp"/>
-    <source-file src="src/ios/IOBlueApp.m" target-dir="IOBlueApp"/>
+    <header-file src="src/ios/IOBlueApp.h" />
+    <source-file src="src/ios/IOBlueApp.m" />
   </platform>
 
 </plugin>
