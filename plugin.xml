@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
-<plugin id="io.blueapp" version="1.0.0" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
-  <name>io.blueapp</name>
+<plugin id="cordova-plugin-blueapp" version="1.0.0" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+  <name>cordova-plugin-blueapp</name>
   <description>Cordova BlueApp Plugin</description>
 
   <asset src="www/ioblueapp.js" target="js/ioblueapp.js"/>
@@ -13,11 +13,11 @@
 
     <config-file target="res/xml/config.xml" parent="/*">
       <feature name="IOBlueApp">
-        <param name="android-package" value="io.blueapp.IOBlueApp"/>
+        <param name="android-package" value="com.vensi.plugin.IOBlueApp"/>
       </feature>
     </config-file>
 
-    <source-file src="src/android/IOBlueApp.java" target-dir="src/io/blueapp/"/>
+    <source-file src="src/android/IOBlueApp.java" target-dir="src/com/vensi/plugin/blueapp/"/>
   </platform>
 
   <platform name="ios">

@@ -1,4 +1,4 @@
-package io.blueapp;
+package com.vensi.plugin.blueapp;
 
 import android.content.Context;
 import android.util.Log;
