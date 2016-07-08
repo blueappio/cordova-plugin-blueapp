@@ -13,11 +13,11 @@
 
     <config-file target="res/xml/config.xml" parent="/*">
       <feature name="IOBlueApp">
-        <param name="android-package" value="com.vensi.plugin.IOBlueApp"/>
+        <param name="android-package" value="com.plugin.blueapp.IOBlueApp"/>
       </feature>
     </config-file>
 
-    <source-file src="src/android/IOBlueApp.java" target-dir="src/com/vensi/plugin/blueapp/"/>
+    <source-file src="src/android/IOBlueApp.java" target-dir="src/com/plugin/blueapp/blueapp/"/>
   </platform>
 
   <platform name="ios">
