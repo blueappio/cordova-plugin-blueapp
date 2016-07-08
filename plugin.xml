@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<plugin id="cordova-plugin-blueapp" version="1.0.0" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+<plugin id="cordova-plugin-blueapp" version="1.0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
   <name>cordova-plugin-blueapp</name>
   <description>Cordova BlueApp Plugin</description>
 
@@ -13,11 +13,11 @@
 
     <config-file target="res/xml/config.xml" parent="/*">
       <feature name="IOBlueApp">
-        <param name="android-package" value="com.plugin.blueapp.IOBlueApp"/>
+        <param name="android-package" value="cordova.plugin.blueapp.IOBlueApp"/>
       </feature>
     </config-file>
 
-    <source-file src="src/android/IOBlueApp.java" target-dir="src/com/plugin/blueapp/blueapp/"/>
+    <source-file src="src/android/IOBlueApp.java" target-dir="src/cordova/plugin/blueapp/"/>
   </platform>
 
   <platform name="ios">

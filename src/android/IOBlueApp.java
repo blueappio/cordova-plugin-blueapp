@@ -1,4 +1,4 @@
-package com.plugin.blueapp;
+package cordova.plugin.blueapp;
 
 import android.content.Context;
 import android.util.Log;
