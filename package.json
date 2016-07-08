@@ -14,14 +14,14 @@
         "url": "https://github.com/blueappio/io.blueapp"
     },
     "keywords": [
-        "ecosystem:cordova"
+        "ecosystem:cordova",
         "cordova",
         "vensi",
         "cordova-ios",
         "cordova-android",
         "gattip",
         "blueapp",
-        "blueapp.io"
+        "blueapp.io",
         "bluetooth",
         "ble"
     ],
