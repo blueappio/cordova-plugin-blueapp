@@ -1,7 +1,7 @@
 {
     "name": "io.blueapp",
     "version": "1.0.0",
-    "description": "Cordova BlueApp Plugin",
+    "description": "Cordova BlueApp.io Plugin",
     "cordova": {
         "id": "io.blueapp",
         "platforms": [
