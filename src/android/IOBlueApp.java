@@ -11,8 +11,8 @@ import org.gatt_ip.GATTIPListener;
 import org.json.JSONArray;
 import org.json.JSONException;
 
-public class BlueAppBridge extends CordovaPlugin {
-    public static String TAG = "BlueAppBridge";
+public class IOBlueApp extends CordovaPlugin {
+    public static String TAG = "IOBlueApp";
 
     @Override
     public boolean execute(String action, JSONArray data, final CallbackContext callbackContext) throws JSONException {
@@ -22,7 +22,7 @@ public class BlueAppBridge extends CordovaPlugin {
                 MainActivity.gattip.setGATTIPListener(new GATTIPListener() {
                     @Override
                     public void response(String gattipResponse) {
-                        MainActivity.showLogs(Log.DEBUG, TAG, "Response  >>>>>>>>>> : " + gattipResponse);
+                        MainActivity.showLogs(Log.DEBUG, TAG, "IOBlueApp Response  >>>>>>>>>> : " + gattipResponse);
                         PluginResult result = new PluginResult(PluginResult.Status.OK, gattipResponse);
                         result.setKeepCallback(true);
                         callbackContext.sendPluginResult(result);
@@ -34,7 +34,7 @@ public class BlueAppBridge extends CordovaPlugin {
 
                 if (gattipRequest != null) {
                     try {
-                        MainActivity.showLogs(Log.DEBUG, TAG, "Request <<<<<<<<<< : " + gattipRequest);
+                        MainActivity.showLogs(Log.DEBUG, TAG, "IOBlueApp Request <<<<<<<<<< : " + gattipRequest);
                         MainActivity.gattip.request(gattipRequest);
                     } catch (Exception e) {
                         e.printStackTrace();

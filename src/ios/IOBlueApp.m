@@ -1,13 +1,13 @@
-#import "BlueAppBridge.h"
+#import "IOBlueApp.h"
 #import "GATTIP.h"
 
-@interface BlueAppBridge () <GATTIPDelegate> {
+@interface IOBlueApp () <GATTIPDelegate> {
 }
 
 @property(nonatomic, strong)GATTIP *gattip;
 @end
 
-@implementation BlueAppBridge
+@implementation IOBlueApp
 
 NSString* callbackId;
 
@@ -26,7 +26,7 @@ NSString* callbackId;
     [self.commandDelegate runInBackground:^{
         callbackId = [command callbackId];
         NSString* request = [[command arguments] objectAtIndex:0];
-        NSLog(@"BlueAppBridge Request <<<<<<<<<< : %@",request);
+        NSLog(@"IOBlueApp Request <<<<<<<<<< : %@",request);
         
         NSData *stringValueData = [request dataUsingEncoding:NSUTF8StringEncoding];
         if(_gattip && stringValueData){
@@ -39,7 +39,7 @@ NSString* callbackId;
 {
     [self.commandDelegate runInBackground:^{
         NSString *gattipResponse =  [[NSString alloc] initWithData:gattipMesg encoding:NSUTF8StringEncoding];
-        NSLog(@"BlueAppBridge Response >>>>>>>>>> : %@",gattipResponse);
+        NSLog(@"IOBlueApp Response >>>>>>>>>> : %@",gattipResponse);
         
         CDVPluginResult* result = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:gattipResponse];
         result.keepCallback = [NSNumber numberWithInt:1];
