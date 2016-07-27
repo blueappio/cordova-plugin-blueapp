@@ -3,10 +3,10 @@
   <name>cordova-plugin-blueapp</name>
   <description>Cordova BlueApp Plugin</description>
 
-  <asset src="www/ioblueapp.js" target="js/ioblueapp.js"/>
+  <!-- <asset src="www/ioblueapp.js" target="js/ioblueapp.js"/> -->
 
   <js-module src="www/ioblueapp.js" name="ioblueapp">
-    <clobbers target="cordova.plugins.io.blueapp" />
+    <clobbers target="ioblueapp" />
   </js-module>
 
   <platform name="android">
@@ -23,7 +23,7 @@
   <platform name="ios">
     
     <config-file target="config.xml" parent="/widget">
-      <feature name="cordova-plugin-blueapp">
+      <feature name="IOBlueApp">
         <param name="ios-package" value="IOBlueApp" />
       </feature>
     </config-file>
