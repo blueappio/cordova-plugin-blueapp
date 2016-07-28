@@ -13,11 +13,11 @@
 
     <config-file target="res/xml/config.xml" parent="/*">
       <feature name="IOBlueApp">
-        <param name="android-package" value="cordova.plugin.blueapp.IOBlueApp"/>
+        <param name="android-package" value="com.vensi.plugin.IOBlueApp"/>
       </feature>
     </config-file>
 
-    <source-file src="src/android/IOBlueApp.java" target-dir="src/cordova/plugin/blueapp/"/>
+    <source-file src="src/android/IOBlueApp.java" target-dir="com/vensi/plugin/"/>    
   </platform>
 
   <platform name="ios">

@@ -1,12 +1,12 @@
-package cordova.plugin.blueapp;
+package com.vensi.plugin;
 
-import android.content.Context;
 import android.util.Log;
 
 import com.vensi.connect.MainActivity;
 
-import org.apache.cordova.*;
-import org.gatt_ip.GATTIP;
+import org.apache.cordova.CallbackContext;
+import org.apache.cordova.CordovaPlugin;
+import org.apache.cordova.PluginResult;
 import org.gatt_ip.GATTIPListener;
 import org.json.JSONArray;
 import org.json.JSONException;
