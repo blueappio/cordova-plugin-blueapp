@@ -1,12 +1,12 @@
 <?xml version='1.0' encoding='utf-8'?>
-<plugin id="cordova-plugin-blueapp" version="1.0.3" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+<plugin id="cordova-plugin-blueapp" version="1.0.4" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
   <name>cordova-plugin-blueapp</name>
   <description>Cordova BlueApp Plugin</description>
 
-  <!-- <asset src="www/ioblueapp.js" target="js/ioblueapp.js"/> -->
+  <!-- <asset src="www/blueappio.js" target="js/blueappio.js"/> -->
 
-  <js-module src="www/ioblueapp.js" name="ioblueapp">
-    <clobbers target="ioblueapp" />
+  <js-module src="www/blueappio.js" name="blueappio">
+    <clobbers target="blueappio" />
   </js-module>
 
   <platform name="android">
