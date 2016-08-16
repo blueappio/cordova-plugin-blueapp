@@ -47,4 +47,13 @@ NSString* callbackId;
     }];
 }
 
+- (void)close:(CDVInvokedUrlCommand*)command
+{
+    [self.commandDelegate runInBackground:^{
+        if(_gattip != nil){
+            _gattip = nil;
+        }
+    }];
+}
+
 @end
