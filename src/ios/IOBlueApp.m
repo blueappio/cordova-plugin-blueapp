@@ -14,10 +14,8 @@ NSString* callbackId;
 - (void)init:(CDVInvokedUrlCommand*)command
 {
     [self.commandDelegate runInBackground:^{
-        if(_gattip == nil){
-            _gattip = [[GATTIP alloc] init];
-            [_gattip setDelegate:self];
-        }
+        _gattip = [[GATTIP alloc] init];
+        [_gattip setDelegate:self];
     }];
 }
 
