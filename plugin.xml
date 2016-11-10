@@ -1,35 +1,41 @@
 <?xml version='1.0' encoding='utf-8'?>
-<plugin id="cordova-plugin-blueapp" version="1.0.7" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
-  <name>cordova-plugin-blueapp</name>
-  <description>Cordova BlueApp Plugin</description>
+<plugin id="cordova-plugin-blueapp" version="1.0.8" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>BlueApp.io</name>
+    <description>Cordova BlueApp Plugin</description>
+    <!-- <asset src="www/blueappio.js" target="js/blueappio.js"/> -->
+    <js-module src="www/blueappio.js" name="blueappio">
+        <clobbers target="blueappio" />
+    </js-module>
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="IOBlueApp">
+                <param name="android-package" value="com.vensi.plugin.IOBlueApp" />
+            </feature>
+        </config-file>
+        <config-file target="AndroidManifest.xml" parent="/manifest">
+            <uses-feature android:name="android.hardware.bluetooth" android:required="true" />
+            <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+            <uses-permission android:name="android.permission.BLUETOOTH" />
+            <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+            <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+            <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+        </config-file>
+        <config-file target="AndroidManifest.xml" parent="/manifest/application">
+            <service android:exported="true" android:enabled="true" android:name="org.gatt_ip.BluetoothLEService">
+            </service>
+        </config-file>
+        <source-file src="src/android/libs/GATT-IP-LIB.jar" target-dir="libs/" />
+        <source-file src="src/android/IOBlueApp.java" target-dir="src/com/vensi/plugin/" />
+    </platform>
 
-  <!-- <asset src="www/blueappio.js" target="js/blueappio.js"/> -->
-
-  <js-module src="www/blueappio.js" name="blueappio">
-    <clobbers target="blueappio" />
-  </js-module>
-
-  <platform name="android">
-
-    <config-file target="res/xml/config.xml" parent="/*">
-      <feature name="IOBlueApp">
-        <param name="android-package" value="com.vensi.plugin.IOBlueApp"/>
-      </feature>
-    </config-file>
-
-    <source-file src="src/android/IOBlueApp.java" target-dir="src/com/vensi/plugin/"/>    
-  </platform>
-
-  <platform name="ios">
-    
-    <config-file target="config.xml" parent="/widget">
-      <feature name="IOBlueApp">
-        <param name="ios-package" value="IOBlueApp" />
-      </feature>
-    </config-file>
-
-    <header-file src="src/ios/IOBlueApp.h" />
-    <source-file src="src/ios/IOBlueApp.m" />
-  </platform>
-
+    <platform name="ios">
+        <config-file target="config.xml" parent="/widget">
+            <feature name="IOBlueApp">
+                <param name="ios-package" value="IOBlueApp" />
+            </feature>
+        </config-file>
+        <header-file src="src/ios/IOBlueApp.h" />
+        <source-file src="src/ios/IOBlueApp.m" />
+        <framework src="src/ios/framework/GATT-IP-LIB.framework" custom="true" />
+    </platform>
 </plugin>

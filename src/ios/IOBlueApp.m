@@ -1,5 +1,6 @@
 #import "IOBlueApp.h"
-#import "GATTIP.h"
+// #import "GATTIP.h"
+#import <GATT-IP-LIB/GATTIP.h>
 
 @interface IOBlueApp () <GATTIPDelegate> {
 }
