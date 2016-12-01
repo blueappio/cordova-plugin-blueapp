@@ -1,4 +1,4 @@
-package com.vensi.plugin;
+package io.blueapp.webbluetooth;
 
 import android.content.Context;
 import android.util.Log;
